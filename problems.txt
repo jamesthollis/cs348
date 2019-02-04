@@ -1,3 +1,5 @@
+https://nathannn97.github.io/cs348/eveg-js/eveg.html?fbclid=IwAR24p9pgAiFd6GVQZwn18hmnakbUOoP-TZwfEO6xISDCL_y9zh7R7t124kw
+
 1. Colours poor for colourblind people on home page
 2. Text of fruit name same size as subtext
 3. Pictures of fruit different sizes, not alligned
