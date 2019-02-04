@@ -18,7 +18,7 @@
             document.write('         <td class = "prodName">' + productDetails[product]["name"] + ' </td>\n');
             document.write('         <td>' +'£' + productDetails[product]["price"] + '</td>\n');
             document.write('         <td>' + '/ ' + productDetails[product]["units"] + '</td>\n');
-            document.write('         <td><input name="' + product + '" id="' + product + '" type="text" value="" style="width: 30px;" /></td>\n');
+            document.write('         <td><input name="' + product + ' name="' + " id="' + product + '" type="text" value="" style="width: 30px;" /></td>\n');
             document.write('         <td><input name="add' + product + '" type="button" value="add to basket" onclick="javascript:addToBasket(\'' + product + '\', document.getElementById(\'' + product + '\').value)" /></td>\n');
             document.write('       </tr>\n');
             document.write('       <tr>\n');
@@ -31,7 +31,7 @@
 
     <div style="position: fixed; bottom: 0; left: 0; right: 0; height: 50px;">
       <form>
-        <input type="button" name="homepage" value="Homepage" onclick="window.location = eveg.html" />
+        <input type="button" name="homepage" value="Homepage" onclick="location.href='eveg.html';" />
       </form>
     </div>
   </body>
