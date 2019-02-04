@@ -18,7 +18,7 @@ tr {
   text-align: centre;
   margin: auto;
 }
-.cart{
+#cart{
   position: fixed;
   right: 5px;
   top: 5px;
