@@ -8,7 +8,8 @@
   </head>
   <body>
     <form>
-      <input type="image" id="cart" src="img/cart.png" onclick="window.open('basket.html')"/>
+      <input type="image" class="cart" src="img/cart.png" onclick="window.open('basket.html')"/>
+      <input type="image" class="cart" src="img/home.png" onclick="location.href='eveg.html';" />
       <table>
         <script>
           var productDetails = getProductDetails();
@@ -18,7 +19,7 @@
             document.write('         <td class = "prodName">' + productDetails[product]["name"] + ' </td>\n');
             document.write('         <td>' +'£' + productDetails[product]["price"] + '</td>\n');
             document.write('         <td>' + '/ ' + productDetails[product]["units"] + '</td>\n');
-            document.write('         <td><input name="' + product + '" id="' + product + '" type="text" value="" style="width: 30px;" /></td>\n');
+            document.write('         <td><input name="' + product + ' name="' + " id="' + product + '" type="text" value="" style="width: 30px;" /></td>\n');
             document.write('         <td><input name="add' + product + '" type="button" value="add to basket" onclick="javascript:addToBasket(\'' + product + '\', document.getElementById(\'' + product + '\').value)" /></td>\n');
             document.write('       </tr>\n');
             document.write('       <tr>\n');
