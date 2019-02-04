@@ -10,7 +10,7 @@
   <body>
     <form>
       <input type="image" id="cart" src="img/cart.png" onclick="window.open('basket.html')"/>
-      <!-- <input type="image" class="cart" src="img/home.png" onclick="location.href='eveg.html';" /> -->
+      <input type="image" id="homepage" src="img/home.png" onclick="location.href='eveg.html';" />
       <table>
         <script>
           var productDetails = getProductDetails();
@@ -27,28 +27,6 @@
             document.write('         <td class = "prodeDesc">' + productDetails[product]["description"] + '</td>\n');
             document.write('       </tr>\n');
           }
-          jQuery(document).ready(function(){
-            $('.qtyplus').click(function(e){
-              e.preventDefault();
-              fname = $(this).attr('field');
-              var val = parseInt($('input[name=' + fname + ']').val());
-              if(!isNaN(val)) {
-                $('input[name='+fname+']').val(val + 1);
-              }
-            });
-            $('.qtyminus').click(function(e){
-              e.preventDefault();
-              fname = $(this).attr('field');
-              var val = parseInt($('input[name=' + fname + ']').val());
-              if(!isNaN(val)) {
-                if(val > 0){
-                  $('input[name='+fname+']').val(val - 1);
-                }
-                else {
-                  $('input[name='+fname+']').val(0);
-                }
-              }
-            });         
         </script>
       </table>
     </form>

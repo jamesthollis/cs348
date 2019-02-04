@@ -26,3 +26,12 @@ tr {
   height: 100px;
   width: 100px;
 }
+
+#homepage{
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px
+}
