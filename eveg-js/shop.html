@@ -27,6 +27,30 @@
             document.write('         <td class = "prodeDesc">' + productDetails[product]["description"] + '</td>\n');
             document.write('       </tr>\n');
           }
+          jQuery(document).ready(function(){
+            $('.qtyplus').click(function(e){
+              e.preventDefault();
+              fname = $(this).attr('field');
+              var val = parseInt($('input[name=' + fname + ']').val());
+              if(!isNaN(val)) {
+                $('input[name='+fname+']').val(val + 1);
+              }
+            });
+            $('.qtyminus').click(function(e){
+              e.preventDefault();
+              fname = $(this).attr('field');
+              var val = parseInt($('input[name=' + fname + ']').val());
+              if(!isNaN(val)) {
+                if(val > 0){
+                  $('input[name='+fname+']').val(val - 1);
+                }
+                else {
+                  $('input[name='+fname+']').val(0);
+                }
+              }
+            });
+52
+         
         </script>
       </table>
     </form>
