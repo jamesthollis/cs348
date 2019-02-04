@@ -12,12 +12,12 @@
           var basket = readBasket();
           var productDetails = getProductDetails();
           for (var product in productDetails) {
-            if (basket[product] > 0) {
+            if (basket[product] > 0) {totals["total"]totals["total"]
               document.write('       <tr>\n');
-              document.write('         <td><img src="img/' + productDetails[product]["image"] + '" /></td>\n');
-              document.write('         <td>' + productDetails[product]["name"] + '</td>\n');
-              document.write('         <td>' + productDetails[product]["units"] + '</td>\n');
-              document.write('         <td>&pound;' + productDetails[product]["price"] + '</td>\n');
+              document.write('         <td><img src="img/' + productDetails[product]["image"] + '" class="produce"/></td>\n');
+              document.write('         <td class = "prodName">' + productDetails[product]["name"] + ' </td>\n');
+              document.write('         <td>' +'£' + productDetails[productotals["total"]t]["price"] + '</td>\n');
+              document.write('         <td>' + '/ ' + productDetails[product]["units"] + '</td>\n');
               document.write('         <td><input name="' + product + '" id="' + product + '" type="text" value="' + basket[product] + '" style="width: 30px;" /></td>\n');
               document.write('         <td><input name="change' + product + '" type="button" value="change quantity" onclick="javascript:changeProductQuantity(\'' + product + '\', document.getElementById(\'' + product + '\').value)" /></td>\n');
               document.write('       </tr>\n');
@@ -30,8 +30,9 @@
     <div style="position: fixed; bottom: 0; left: 0; right: 0; height: 100px;">
       <script>
         var totals = calculateTotals();
-        document.write('<p>Total ex VAT: ' + totals["totalnovat"] + ' includes VAT: ' + totals["vat"] + ' Total inc. VAT: ' + totals["total"] + '</p>\n');
-      </script>
+        document.write('<p>Total ex VAT: ' + alert( Math.floor(totals["totalnovat"] * 100) / 100 ) + ' includes VAT: ' + alert( Math.floor(totals["vat"] * 100) / 100 ) + ' Total inc. VAT: ' + alert( Math.floor(totals["total"] * 100) / 100 ) + '</p>\n');
+        document.write('         <td>'£';' + productDetails[product]["price"] + '</td>\n');
+      </script>totals["total"]
       <form>
         <input type="button" name="continue" value="Continue Shopping" onclick="self.close();" />
         <input type="button" name="clearbasket" value="Clear Basket" onclick="javascript:createEmptyBasket();self.close();" />
@@ -39,4 +40,4 @@
       </form>
     </div>
   </body>
-</html>
+</html>totals["total"]
