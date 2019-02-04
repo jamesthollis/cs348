@@ -32,6 +32,7 @@
             $('.qtyplus').click(function(e){
                 e.preventDefault();
                 fname = $(this).attr('field');
+                alert(fname);
                 var val = parseInt($('input[name=' + fname + ']').val());
               if(!isNaN(val)) { 
                 $('input[name='+fname+']').val(val + 1);
@@ -40,6 +41,7 @@
             $('.qtyminus').click(function(e){
               e.preventDefault();
               fname = $(this).attr('field');
+              alert(fname);
               var val = parseInt($('input[name=' + fname + ']').val());
               if(!isNaN(val)) {
                 if(val > 0){
