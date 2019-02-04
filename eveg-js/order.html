@@ -2,46 +2,102 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
   <head>
     <title></title>
+    <link rel="stylesheet" href="styleOrder.css">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
     <script type="text/javascript" src="model.js"></script>
   </head>
-  <body style="background-color: #bbb;" onload="createEmptyOrder();">
-    <form>
-      <table>
-       <tr>
-         <td>
-           Title: <input type="text" name="title" id="title" value="" style="width: 20px;" />
-           First Name: <input type="text" name="firstname" id="firstname" value="" style="width: 120px;" />
-           Surname: <input type="text" name="surname" id="surname" value="" style="width: 120px;" />
-         </td>
-       </tr>
-       <tr>
-         <td>
-           Number: <input type="text" name="number" id="number" value="" style="width: 30px;" />
-           Street: <input type="text" name="street" id="street" value="" style="width: 120px;" />
-         </td>
-       </tr>
-       <tr>
-         <td>
-           Postcode: <input type="text" name="postcode" id="postcode" value="" style="width: 40px;" />
-           City: <input type="text" name="city" id="city" value="" style="width: 120px;" />
-           Country: <input type="text" name="country" id="country" value="" style="width: 120px;" />
-         </td>
-       </tr>
-       <tr>
-         <td>
-           Card Type: <div style="display: inline-block;"><input type="radio" name="cardtype" id="solo" value="Solo" /> Solo<br /><input type="radio" name="cardtype" id="switch" value="Switch" /> Switch<br /><input type="radio" name="cardtype" id="mastercard" value="Mastercard" /> Mastercard<br /><input type="radio" name="cardtype" id="visa" value="Visa" /> Visa</div> 
-           Card Number: <input type="text" name="cardnumber" id="cardnumber" value="" style="width: 120px;" />
-           Expiry Date: <input type="text" name="month" id="month" value="" style="width: 10px;" /> <input type="text" name="year" id="year" value="" style="width: 10px;" />
-         </td>
-       </tr>
-       <tr>
-         <td style="text-align: center;">
-           <input type="button" name="cancel" value="Cancel" onclick="self.close()" />
-           <input type="button" name="proceed" value="Proceed" onclick="setName();setAddress();setCardDetails();window.open('invoice.html');self.close();"/>
-         </td>
-       </tr>
-      </table>
-    </form>
+  <body onload="createEmptyOrder();">
+    <h1>Order</h1>
+    <div id="wrapper">
+      <div class="row">
+        <div class="column left">
+          <h2>Billing Information</h2>
+          <form>
+          <table>
+            <tr>
+              <td>
+                First Name* <input type="text" name="firstname" id="firstname" placeholder="Your name.."/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Surname* <input type="text" name="surname" id="surname" placeholder="Your last name.."/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Number* <input type="text" name="number" id="number"/>
+              </td>
+              <td>
+                Street* <input type="text" name="street" id="street"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                City: <input type="text" name="city" id="city"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Country: <input type="text" name="country" id="country"/>
+              </td>
+              <td>  
+                Postcode: <input type="text" name="postcode" id="postcode"/>
+              </td>
+            </tr>
+          </table>
+          </form>
+        </div>
+
+        <div class="column right">
+          <h2>Payment Details</h2>
+          <form>
+          <table>
+            <tr>
+              <td>
+                Card Number: <input type="text" name="cardnumber" id="cardnumber" placeholder="&#x25CF &#x25CF &#x25CF &#x25CF - &#x25CF &#x25CF &#x25CF &#x25CF - &#x25CF &#x25CF &#x25CF &#x25CF - &#x25CF &#x25CF &#x25CF &#x25CF"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Month: <input type="text" name="month" id="month" placeholder="01" list="monthNumbers"/><!--  -->
+                <datalist id="monthNumbers">
+                  <option value="01">
+                  <option value="02">
+                  <option value="03">
+                  <option value="04">
+                  <option value="05">
+                  <option value="06">
+                  <option value="07">
+                  <option value="08">
+                  <option value="09">
+                  <option value="10">
+                  <option value="11">
+                  <option value="12">
+                </datalist>
+              </td>
+              <td>
+                Year: <input type="number" name="year" id="year" placeholder="2018" />
+              </td>
+            </tr>
+          </table>
+          </form>
+        </div>
+
+        <div class="column right2">
+          <h2>Your Order</h2>
+          <form>
+          <table>
+            <tr>
+              <td style="text-align: center;">
+                <input type="button" name="cancel" value="Cancel" onclick="self.close()" />
+                <input type="button" name="proceed" value="Proceed" onclick="setName();setAddress();setCardDetails();window.open('invoice.html');self.close();"/>
+              </td>
+            </tr>
+          </table>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
