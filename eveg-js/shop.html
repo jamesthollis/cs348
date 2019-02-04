@@ -20,7 +20,9 @@
             document.write('         <td class = "prodName">' + productDetails[product]["name"] + ' </td>\n');
             document.write('         <td>' +'£' + productDetails[product]["price"] + '</td>\n');
             document.write('         <td>' + '/ ' + productDetails[product]["units"] + '</td>\n');
-            document.write('         <td><input name="' + product + ' name="' + " id="' + product + '" type="text" value="" style="width: 30px;" /></td>\n');
+            document.write( "<input type='button' value='-' class='qtyminus' field='quant" + productDetails[product]["name"] + "' style='font-weight: bold;' />")
+            document.write("<input type='text' name='quant" + productDetails[product]["name"] + "' value='1' class='qty' style='margin-bottom: 0px !important' onkeypress='return event.charCode >= 47 && event.charCode <= 57'/>")
+            document.write( "<input type='button' value='+' class='qtyplus' field='quant" + productDetails[product]["name"] + "' style='font-weight: bold;' />")
             document.write('         <td><input name="add' + product + '" type="button" value="add to basket" onclick="javascript:addToBasket(\'' + product + '\', document.getElementById(\'' + product + '\').value)" /></td>\n');
             document.write('       </tr>\n');
             document.write('       <tr>\n');
