@@ -140,6 +140,7 @@ select {
   background-color: #074446;
   border-radius: 4px;
   color:white;
+  cursor: pointer;
 }
 
 /* ----------------------------------------------- */
