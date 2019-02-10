@@ -1,0 +1,160 @@
+<!-- 
+TO-DO List
+----------
+- card number should only accept numbers 
+- if basket is empty then it should not open order page
+  -> or if £NaN change this to 0
+
+Extra
+-----
+- tick box and cross for correct form boxes filled
+- mini icons for card type
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="order.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin Dark' rel='stylesheet'/>
+        <link href='https://fonts.googleapis.com/css?family=Padauk' rel='stylesheet'/>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/> 
+
+    <script type="text/javascript" src="model.js"></script>
+  </head>
+  <body onload="createEmptyOrder();">
+    <h1>Checkout</h1>
+    <div id="wrapper">
+      <div class="column left">
+        <p class="required">*Required Field</p>
+        <h2>Billing Information</h2>
+        <form>
+        <table>
+          <tr>
+            <td>
+              Title*
+              <select required>
+                <option value="" disabled selected></option>
+                <option>Mr</option>
+                <option>Miss</option>
+                <option>Mrs</option>
+                <option>Ms</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              First Name* <input type="text" name="firstname" id="firstname" placeholder="First Name" required/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Surname* <input type="text" name="surname" id="surname" placeholder="Surname" required/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              No./Apt/Unit# <input type="text" name="number" id="number" placeholder="House No." required/>
+            </td>
+            <td>
+              Street* <input type="text" name="street" id="street" placeholder="Street" required/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              City* <input type="text" name="city" id="city" placeholder="City" required/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Country* <input type="text" name="country" id="country" placeholder="Country" required/>
+            </td>
+            <td>  
+              Zip/Postcode* <input type="text" name="postcode" id="postcode" placeholder="Postcode" required/>
+            </td>
+          </tr>
+        </table>
+        </form>
+      </div>
+
+      <div class="column right">
+        <p class="required">*Required Field</p>
+        <h2>Payment Details</h2>
+        <form>
+        <table>
+          <tr>
+            <td>
+              Card Type*
+              <select required>
+                <option value="cardtype" disabled selected>Card Type</option>
+                <option>Mastercard</option>
+                <option>Solo</option>
+                <option>Switch</option>
+                <option>Visa</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Card Number* <input type="text" name="cardnumber" id="cardnumber" placeholder="0000 0000 0000 0000" required/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Month*
+              <select required>
+                <option value="MM" disabled selected>MM</option>
+                <option>01</option><option>02</option>
+                <option>03</option><option>04</option>
+                <option>05</option><option>06</option>
+                <option>07</option><option>08</option>
+                <option>09</option><option>10</option>
+                <option>11</option><option>12</option>
+              </select>
+            </td>
+            <td>
+              Year*
+              <select required>
+                <script type="text/javascript">
+                  document.write('<option value="YYYY" disabled selected>YYYY</option>\n')
+                  var options="";
+                  for(var i=2019;i<2051;i++){
+                      document.write('<option>'+ i +'</option>\n'); 
+                  }
+                </script>
+              </select>
+            </td>
+          </tr>
+        </table>
+        </form>
+      </div>
+
+      <div class="column right2">
+        <h2>Your Order</h2>
+        <p id="total">
+          <span id="totaltext">Subtotal:</span>
+          <span id="totalvalue">
+            <script type="text/javascript"> 
+              var total = calculateTotals();
+              document.write('\xA3' + Number(total["total"]).toFixed(2));
+            </script>
+          </span>
+        </p>
+        <div id=buttons>
+          <form>
+          <table>
+            <tr>
+              <td>
+                <input id="cancel" type="button" name="cancel" value="Cancel" onclick="window.open('shop.html','_self');"/>
+                <input id="proceed" type="button" name="proceed" value="Proceed" onclick="setName();setAddress();setCardDetails();window.open('invoice.html');self.close();"/>
+              </td>
+            </tr>
+          </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
