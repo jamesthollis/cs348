@@ -1,5 +1,5 @@
 function getProductDetails() {
-
+    productDetails = {};
 
     productDetails["apples"] = {};
     productDetails["apples"]["image"] = "apples.gif";
@@ -15,7 +15,6 @@ function getProductDetails() {
     productDetails["bananas"]["units"] = "500g";
     productDetails["bananas"]["price"] = 1.29;
 
-
     productDetails["beans"] = {};
     productDetails["beans"]["image"] = "beans.gif";
     productDetails["beans"]["name"] = "Beans";
@@ -23,7 +22,6 @@ function getProductDetails() {
     productDetails["beans"]["units"] = "1kg";
     productDetails["beans"]["price"] = 1.29;
 
-    productDetails = {};
     productDetails["carrots"] = {};
     productDetails["carrots"]["image"] = "carrots.gif";
     productDetails["carrots"]["name"] = "Carrots";
