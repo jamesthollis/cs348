@@ -102,8 +102,16 @@ select {
   width: 142px;
 }
 
+.cciconspan {
+  float: left;
+  position: relative;
+  margin-top:-23px;
+  margin-left: 5px;
+}
+
 #cardnumber{
-  width: 150px;
+  width: 140px;
+  padding-left: 30px;
 }
 
 /* when input boxes are clicked on they will turn dark grey*/
