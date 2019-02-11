@@ -62,7 +62,7 @@ order.html
 2. expiry data can take letters.
 3. do not allow user to proceed with payment if the form boxes are filled incorrectly 
 4. notify user if there are empty form boxes   
-2. cancel button should direct user back to basket
+5. cancel button should direct user back to basket
 
 
 
@@ -71,12 +71,12 @@ invoice.html
 1. invoice page can be edited 
 2. does not state the quantity of products ordered just individual price
 3. alongside the indviudal price the overall prices of each product ordered should also be given
-3. option to return to the homepage
-4. amounts should be rounded to 2 d.p
+4. option to return to the homepage
+5. amounts should be rounded to 2 d.p
 
 
 All Pages
 ---------
-- consistent colour scheme for all pages i.e. same background colour for all pages 
-- pages should not open in a new tab apart from invoice.html
-- navigation bar on all pages
+1. consistent colour scheme for all pages i.e. same background colour for all pages 
+2. pages should not open in a new tab apart from invoice.html
+3. navigation bar on all pages

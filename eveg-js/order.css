@@ -1,0 +1,160 @@
+h1{
+  text-align: center;
+  font-family: Palanquin Dark;
+  text-transform: uppercase;
+  color: green;
+  min-width: 650px;
+}
+
+h2{
+  text-align: left;
+  font-family: Palanquin Dark;
+  border-bottom: 2px solid green;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+/* displays the ""*Required Field" text inline to the right with   
+box title */
+.required {
+  display: inline;
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* wrapper for the three boxes */
+#wrapper { 
+  width: 50%;
+  margin: 20px auto;
+  font-size: 0;
+  min-width: 650px;
+}
+
+.left {
+  float: left;
+  width: 48%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Padauk;
+  background: -webkit-linear-gradient(top,transparent, #b4f2b3 100%); */
+}
+
+.right, .right2 {
+  float: right;
+  width: 48%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Padauk;
+  background: -webkit-linear-gradient(top,transparent, #b4f2b3 100%); */
+}
+
+/* space between the top right box and bottom right box */
+.right{
+  margin-bottom: 14px;
+}
+
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+
+/* display each input title as a block with 5px padding all around */
+tr {
+  display: block;
+  padding: 5px;
+}
+
+/* 
+- display each column within a row as an inline-block   
+- rows that have two columns will be displayed inline 
+*/
+td {
+  display: inline-block;
+}
+
+
+/* input and select boxes will have a grey outline*/
+.left input, .right input, select {
+  display: block;
+  padding: 5px 5px;
+  width: 128px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  outline: none;
+}
+
+select {
+  width: 142px;
+}
+
+.cciconspan {
+  float: left;
+  position: relative;
+  margin-top:-23px;
+  margin-left: 5px;
+}
+
+#cardnumber{
+  width: 140px;
+  padding-left: 30px;
+}
+
+/* when input boxes are clicked on they will turn dark grey*/
+.left input:focus, .right input:focus, select:focus {
+  border: 3px solid #555;
+}
+
+/* ----------------------------------------------- */
+/*Bottom Right Box (.right2) */
+
+.right2 #total {
+  background-color: #cac9c9;
+  border: 5px solid #555;
+  padding: 5px;
+}
+
+#totaltext {
+  padding-left: 10px;
+}
+
+#totalvalue {
+  float: right;
+  padding-right: 10px;
+  font-family: cursive;
+}
+
+.right2 #buttons{
+  float: right;
+}
+
+#cancel, #proceed{
+  width: 108px;
+  height: 30px;
+  background-color: #074446;
+  border-radius: 4px;
+  color:white;
+  cursor: pointer;
+}
+
+/* ----------------------------------------------- */
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
